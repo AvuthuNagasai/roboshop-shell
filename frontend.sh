@@ -12,5 +12,5 @@ unzip /tmp/frontend.zip &>>/tmp/roboshop.log
 ## we need to copy config file
 
 echo -e "\e[34m starting nginx content\e[om"
-systemctl enable nginx
-systemctl start nginx
+systemctl enable nginx &>>/tmp/roboshop.log
+systemctl start nginx &>>/tmp/roboshop.log
