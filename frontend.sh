@@ -13,4 +13,4 @@ unzip /tmp/frontend.zip
 
 echo -e "\e[33mstarting nginx content\e[om"
 systemctl enable nginx
-systemctl start nginxop
+systemctl start nginxp
