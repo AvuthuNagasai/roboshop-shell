@@ -17,10 +17,9 @@ echo -e "\e[34m Download the application code to created app directory \e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip &>>/tmp/roboshop.log
 cd /app
 unzip /tmp/catalogue.zip &>>/tmp/roboshop.log
-
+cd /app
 
 echo -e "\e[34m download the dependencies \e[0m"
-cd /app
 npm install &>>/tmp/roboshop.log
 
 echo -e "\e[33m Setting up SystemD Catalogue Service \e[0m"
