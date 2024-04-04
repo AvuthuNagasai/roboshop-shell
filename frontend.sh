@@ -12,6 +12,7 @@ cd /usr/share/nginx/html
 unzip /tmp/frontend.zip &>>/tmp/roboshop.log
 
 ## we need to copy config file
+cp /root/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 echo -e "\e[31m starting NGINX server\e[0m"
 systemctl enable nginx &>>/tmp/roboshop.log
