@@ -17,7 +17,7 @@ echo -e "\e[34m download the dependencies \e[0m"
 cd /app
 npm install &>>/tmp/roboshop.log
 echo -e "\e[34m Setting up SystemD Catalogue Service \e[0m"
-cp Catalogue Service /root/roboshop-shell /etc/systemd/system/Catalogue.Service &>>/tmp/roboshop.log
+cp Catalogue.Service /etc/systemd/system/Catalogue.Service &>>/tmp/roboshop.log
 echo -e "\e[34m reload the service \e[0m"
 systemctl daemon-reload
 echo -e "\e[34m starting catalogue \e[0m"
