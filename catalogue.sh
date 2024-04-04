@@ -15,13 +15,13 @@ echo -e "\e[34m download the dependencies \e[0m"
 cd /app
 npm install &>>/tmp/roboshop.log
 echo -e "\e[34m Setting up SystemD Catalogue Service \e[0m"
-cp catalogue.service /etc/systemd/system/catalogue.service &>>/tmp/roboshop.log
+cp /root/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service &>>/tmp/roboshop.log
 echo -e "\e[34m starting catalogue \e[0m"
 systemctl daemon-reload
 systemctl enable catalogue
 systemctl start catalogue
 echo -e "\e[34m copy mongodb repo file \e[0m"
-cp mongodb.repo /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log
+cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log
 echo -e "\e[34m install Mongodb server \e[0m"
 dnf install mongodb-org-shell -y &>>/tmp/roboshop.log
 echo -e "\e[34m Loading List of products we want to sell \e[0m"
