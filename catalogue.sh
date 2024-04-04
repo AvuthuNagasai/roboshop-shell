@@ -38,4 +38,4 @@ echo -e "\e[34m install Mongodb server \e[0m"
 dnf install mongodb-org-shell -y
 
 echo -e "\e[33m Loading List of products we want to sell \e[0m"
-mongo --host mongodb-dev.devopsb73.tech </app/schema/catalogue.js
+mongo --host 172.31.88.129 </app/schema/catalogue.js
