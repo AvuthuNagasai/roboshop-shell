@@ -1,12 +1,13 @@
 echo -e "\e[34m enabling nodejs version 18 \e[0m"
-dnf module disable nodejs -y
-dnf module enable nodejs:18 -y
+dnf module disable nodejs -y &>>/tmp/roboshop.log
+dnf module enable nodejs:18 -y &>>/tmp/roboshop.log
 
 echo -e "\e[34m installing nodejs \e[0m"
 dnf install nodejs -y &>>/tmp/roboshop.log
 echo -e "\e[34m adding user roboshop \e[0m"
 useradd roboshop
-echo -e "\e[34m setting app directory \e[0m"
+echo -e "\e[34m create app directory \e[0m"
+rm -rf /app
 mkdir /app
 echo -e "\e[34m Download the application code to created app directory \e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip &>>/tmp/roboshop.log
@@ -14,7 +15,7 @@ cd /app
 unzip /tmp/catalogue.zip &>>/tmp/roboshop.log
 echo -e "\e[34m download the dependencies \e[0m"
 cd /app
-npm install
+npm install &>>/tmp/roboshop.log
 echo -e "\e[34m Setting up SystemD Catalogue Service \e[0m"
 cp Catalogue Service /etc/systemd/system/catalogue.service &>>/tmp/roboshop.log
 echo -e "\e[34m reload the service \e[0m"
