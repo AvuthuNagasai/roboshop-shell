@@ -5,7 +5,7 @@ dnf module enable nodejs:18 -y &>>/tmp/roboshop.log
 echo -e "\e[34m installing nodejs \e[0m"
 dnf install nodejs -y &>>/tmp/roboshop.log
 echo -e "\e[34m adding user roboshop \e[0m"
-useradd roboshop
+useradd roboshop &>>/tmp/roboshop.log
 echo -e "\e[34m create app directory \e[0m"
 rm -rf /app
 mkdir /app
@@ -21,8 +21,8 @@ cp Catalogue Service /etc/systemd/system/Catalogue.Service &>>/tmp/roboshop.log
 echo -e "\e[34m reload the service \e[0m"
 systemctl daemon-reload
 echo -e "\e[34m starting catalogue \e[0m"
-systemctl enable catalogue
-systemctl start catalogue
+systemctl enable Catalogue
+systemctl start Catalogue
 echo -e "\e[34m copy mongodb repo file \e[0m"
 cp mongodb.repo /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log
 echo -e "\e[34m install Mongodb server \e[0m"
