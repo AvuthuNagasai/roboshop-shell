@@ -18,7 +18,7 @@ unzip /tmp/frontend.zip
 rm -rf /etc/nginx/default.d/roboshop.conf
 
 echo -e "\e[31m Create Nginx Reverse Proxy Configuration \e[0m"
-vim /etc/nginx/default.d/roboshop.conf
+cp /root/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 echo -e "\e[31m starting NGINX server\e[0m"
 systemctl restart nginx
