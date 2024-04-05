@@ -39,3 +39,6 @@ dnf install mongodb-org-shell -y &>>/tmp/roboshop.log
 echo -e "\e[33m Loading List of products we want to sell with mongodb \e[0m"
 
 mongo --host 172.31.90.239 </app/schema/catalogue.js
+
+systemctl enable catalogue
+systemctl start catalogue
