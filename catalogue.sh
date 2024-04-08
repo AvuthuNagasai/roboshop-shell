@@ -2,7 +2,7 @@ echo -e "\e[34m enabling nodejs version 18 \e[0m"
 
 dnf module disable nodejs -y &>>/tmp/roboshop.log
 dnf module enable nodejs:18 -y &>>/tmp/roboshop.log
-echo -e "\e[34m installing nodejs \e[0m"
+echo -e "\e[34m instaling nodejs \e[0m"
 dnf install nodejs -y &>>/tmp/roboshop.log
 echo -e "\e[34m adding user \e[0m"
 useradd roboshop
