@@ -1,10 +1,14 @@
+echo -e "\e[34m enabling nodejs version 18 \e[0m"
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
 
-dnf install nodejs -y
 
+echo -e "\e[34m installing nodejs \e[0m"
+dnf install nodejs -y
+echo -e "\e[34m adding user \e[0m"
 useradd roboshop
 
+rm -rf /app
 mkdir /app
 
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
