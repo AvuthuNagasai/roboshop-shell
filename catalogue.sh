@@ -7,7 +7,7 @@ dnf install nodejs -y &>>/tmp/roboshop.log
 echo -e "\e[34m adding user \e[0m"
 useradd roboshop
 echo -e "\e[34m create app directory \e[0m"
-rm-rf /app
+rm -rf /app
 mkdir /app
 echo -e "\e[34m Download the application code to created app directory \e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip &>>/tmp/roboshop.log
