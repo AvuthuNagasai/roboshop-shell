@@ -22,7 +22,7 @@ echo -e "\e[33m Setting up SystemD Catalogue Service \e[0m"
 cp  /root/roboshop-shell/user.service /etc/systemd/system/user.service
 
 
-echo -e "\e[33m starting catalogue \e[0m"
+echo -e "\e[33m starting user \e[0m"
 
 systemctl daemon-reload
 systemctl enable user
