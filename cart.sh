@@ -29,11 +29,3 @@ systemctl daemon-reload &>>/tmp/roboshop.log
 systemctl enable cart &>>/tmp/roboshop.log
 systemctl start cart &>>/tmp/roboshop.log
 
-echo -e "\e[34m copy mongodb repo file \e[0m"
-cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log &>>/tmp/roboshop.log
-
-echo -e "\e[34m install Mongodb server \e[0m"
-dnf install mongodb-org-shell -y &>>/tmp/roboshop.log
-
-echo -e "\e[33m Loading List of products we want to sell \e[0m"
-mongo --host mongodb-dev.devopsb73.tech </app/schema/cart.js &>>/tmp/roboshop.log
