@@ -9,9 +9,9 @@ echo -e "\e[33m Setup the MySQL5.7 repo file \e[0m"
 dnf install mysql-community-server -y &>>/tmp/roboshop.log
 
 echo -e "\e[33m Start MySQL Service \e[0m"
-systemctl enable mysql &>>/tmp/roboshop.log
+systemctl enable mysqld &>>/tmp/roboshop.log
 
-systemctl start mysql &>>/tmp/roboshop.log
+systemctl start mysqld &>>/tmp/roboshop.log
 
 echo -e "\e[33m Start change the default root password  \e[0m"
 mysql_secure_installation --set-root-pass RoboShop@1
