@@ -17,7 +17,7 @@ cd /app
 unzip /tmp/user.zip &>>/tmp/roboshop.log
 
 
-echo -e "\e[34m download the dependencies \e[0m"cd /app
+echo -e "\e[34m download the dependencies \e[0m"
 npm install &>>/tmp/roboshop.log
 
 echo -e "\e[33m Setting up SystemD user Service \e[0m"
