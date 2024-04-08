@@ -28,3 +28,12 @@ echo -e "\e[33m starting user \e[0m"
 systemctl daemon-reload &>>/tmp/roboshop.log
 systemctl enable user &>>/tmp/roboshop.log
 systemctl start user &>>/tmp/roboshop.log
+
+echo -e "\e[34m copy mongodb repo file \e[0m"
+cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log
+
+echo -e "\e[34m install Mongodb server \e[0m"
+dnf install mongodb-org-shell -y &>>/tmp/roboshop.log
+
+echo -e "\e[33m Loading List of products we want to sell \e[0m"
+mongo --host mongodb-dev.devopsb73.tech </app/schema/user.js &>>/tmp/roboshop.log
