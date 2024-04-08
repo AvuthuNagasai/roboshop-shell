@@ -29,7 +29,7 @@ systemctl daemon-reload &>>/tmp/roboshop.log
 systemctl enable user &>>/tmp/roboshop.log
 systemctl start user &>>/tmp/roboshop.log
 
-echo -e "\e[34m copy mongodb repo file \e[0m"
+echo -e "\e[34m copy mongodb repo files \e[0m"
 cp /root/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log
 
 echo -e "\e[34m install Mongodb server \e[0m"
