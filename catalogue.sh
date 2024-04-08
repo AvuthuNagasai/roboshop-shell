@@ -9,7 +9,7 @@ echo -e "\e[34m adding user \e[0m"
 useradd roboshop &>>/tmp/roboshop.log
 
 echo -e "\e[34m create app directory \e[0m"
-rm-rf /app
+rm -rf /app
 mkdir /app &>>/tmp/roboshop.log
 
 
