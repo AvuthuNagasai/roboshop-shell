@@ -21,7 +21,7 @@ echo -e "\e[34m download the dependencies \e[0m"cd /app
 npm install
 
 echo -e "\e[33m Setting up SystemD user Service \e[0m"
-cp /etc/systemd/system/user.service
+cp /root/roboshop-shell/user.service /etc/systemd/system/user.service
 
 
 echo -e "\e[33m starting user \e[0m"
