@@ -29,7 +29,7 @@ echo -e "\e[33m installing mysql \e[0m"
 dnf install mysql -y &>>/tmp/roboshop.log
 
 echo -e "\e[33m Loading Schema \e[0m"
-mysql -h mysql-dev.devopsb73.tech -uroot -pRoboShop@1 < /app/schema/shipping.sql &>>/tmp/roboshop.log
+mysql -h mysql-dev.devopsb73.tech -uroot -pRoboShop@1 < /app/schema/shipping.sql
 
 echo -e "\e[33m starting shipping \e[0m"
 systemctl restart shipping &>>/tmp/roboshop.log
