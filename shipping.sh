@@ -26,7 +26,7 @@ echo -e "\e[33m Loading Schema \e[0m"
 mysql -h mysql-dev.devopsb73.tech -uroot -pRoboShop@1 < /app/schema/shipping.sql &>>/tmp/roboshop.log
 
 echo -e "\e[33m Setting up SystemD shipping Service \e[0m"
-cp /root/roboshop-shell/payment.service /etc/systemd/system/payment.service &>>/tmp/roboshop.log
+cp /root/roboshop-shell/shipping.service /etc/systemd/system/shipping.service &>>/tmp/roboshop.log
 
 echo -e "\e[33m starting shipping \e[0m"
 systemctl daemon-reload &>>/tmp/roboshop.log
