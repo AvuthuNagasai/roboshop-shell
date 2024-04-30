@@ -5,7 +5,7 @@ cp /root/roboshop-shell-dup/mongodb.repo /etc/yum.repos.d/mongo.repo &>>/tmp/rob
 echo -e "\e[31m Installing mongodb \e[0m"
 dnf install mongodb-org -y &>>/tmp/roboshop.log
 
-
+####
 
 echo -e "\e[31m Start & Enable MongoDB Service \e[0m"
 systemctl enable mongod &>>/tmp/roboshop.log
